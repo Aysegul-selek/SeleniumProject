@@ -3,6 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import javax.sound.midi.SysexMessage;
+
 public class Test1 {
     public static void  main(String[] args){
         System.setProperty("webdriver.chrome.driver",
@@ -26,5 +28,10 @@ public class Test1 {
 
         WebElement submintButton=driver.findElement(new By.ByCssSelector("button.btn"));
         submintButton.click();
+
+        /// web elementteki text getir
+        WebElement nameText=driver.findElement(By.xpath("//div/p[@id='name']"));
+        String name=nameText.getText();
+        System.out.println(name);
     }
 }
