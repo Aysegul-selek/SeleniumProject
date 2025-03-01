@@ -12,5 +12,19 @@ public class Test1 {
         WebElement sendElement=driver.findElement(By.id("userName"));//webelemnt bu şekilde is ile bulunuyor.
         sendElement.click();
         sendElement.sendKeys( "Ayşegül");
+
+        WebElement email=driver.findElement(new By.ByCssSelector(".mr-sm-2[id='userEmail']"));
+        email.click();
+        email.sendKeys( "aysegul.selek03@gmail.com");
+
+        WebElement currentAddress=driver.findElement(new By.ByCssSelector(".form-control[placeHolder='Current Address']"));
+        currentAddress.click();
+        currentAddress.sendKeys( "Afyon, Türkiye");
+        WebElement permanentAddress=driver.findElement( By.id("permanentAddress"));
+        permanentAddress.click();
+        permanentAddress.sendKeys( "Afyon, Türkiye");
+
+        WebElement submintButton=driver.findElement(new By.ByCssSelector("button.btn"));
+        submintButton.click();
     }
 }
